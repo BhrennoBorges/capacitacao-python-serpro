@@ -1,12 +1,12 @@
 # Nivelamento Técnico - Fundamentos de Python 🐍
 
-Repositório criado para documentar e armazenar os exercícios práticos desenvolvidos durante a primeira semana de nivelamento técnico para o estágio. O foco foi dominar a sintaxe da linguagem, estruturas de controle, tratamento de erros e manipulação de coleções através do livro *"Automatize Tarefas Maçantes com Python"*.
+Repositório criado para documentar e armazenar os exercícios práticos desenvolvidos durante as semanas de nivelamento técnico para o estágio. O foco foi dominar a sintaxe da linguagem, estruturas de controle, tratamento de erros, manipulação de coleções e automação de sistemas através do livro *"Automatize Tarefas Maçantes com Python"*.
 
 ---
 
 ## 📅 Diário de Bordo - 08/06/2026
 
-Hoje finalizei a leitura e a implementação prática dos **Capítulos 1 ao 5**. Todos os scripts foram testados, corrigidos contra erros de indentação/tipagem e encontram-se 100% funcionais.
+Nesta etapa, finalizei a leitura e a implementação prática dos **Capítulos 1 ao 5**. Todos os scripts foram testados, corrigidos contra erros de indentação/tipagem e encontram-se 100% funcionais.
 
 ### 📝 Resumo dos Capítulos e Scripts Desenvolvidos:
 
@@ -23,14 +23,43 @@ Hoje finalizei a leitura e a implementação prática dos **Capítulos 1 ao 5**.
 
 ---
 
-## 🚀 Prática de Git & Fluxo de Trabalho
+## 📅 Diário de Bordo - 10/06/2026 (Postado em 11/06/2026)
 
-Aproveitando o encerramento deste primeiro ciclo de scripts, utilizei este repositório para praticar a task técnica de Git diretamente através do terminal integrado do VS Code. O objetivo foi fixar os comandos essenciais que serão utilizados no dia a dia do desenvolvimento:
+Finalizei o estudo avançado e a implementação prática dos **Capítulos 6 ao 11**. Este bloco foi focado no desenvolvimento de scripts voltados para a automação de sistemas, auditoria de infraestrutura e cibersegurança, simulando rotinas reais do ambiente de desenvolvimento corporativo.
 
-1. **`git status`**: Para mapear e verificar quais arquivos foram modificados.
-2. **`git add`**: Para mover este `README.md` e os scripts Python para a área de preparação (*Staging Area*).
-3. **`git commit`**: Para registrar as alterações localmente com mensagens claras e semânticas.
-4. **`git push`**: Para enviar o progresso finalizado para o repositório remoto.
+### 📝 Resumo dos Capítulos e Scripts Desenvolvidos:
+
+* **Capítulo 6: Manipulação de Strings (`parser_logs.py`)**
+    * **O que aprendi:** Higienização e tratamento de textos brutos. Utilizei métodos como `.strip()` para remoção de quebras de linha e espaços invisíveis, `.split()` para fatiamento de dados e f-strings estruturadas para transformar strings sujas em alertas padronizados de servidores.
+* **Capítulo 7: Expressões Regulares (`extrator_ips.py`)**
+    * **O que aprendi:** Construção de "moldes" avançados de busca por meio do módulo nativo `re`. Desenvolvi uma lógica de filtragem via `re.compile()` e `.findall()` capaz de varrer relatórios de rede extensos e extrair endereços IPv4 isolados de forma automatizada.
+* **Capítulo 8: Validação de Dados de Entrada (`validador_portas.py`)**
+    * **O que aprendi:** Blindagem de software contra falhas de digitação e dados corrompidos usando a biblioteca `PyInputPlus`. Implementei restrições de tipos numéricos com intervalos fechados (como limites de portas de rede de 1 a 65535) e validações booleanas de confirmação, mitigando erros em tempo de execução (*crashes*).
+* **Capítulo 9: Leitura e Escrita de Arquivos (`gerenciador_whitelist.py`)**
+    * **O que aprendi:** Persistência de dados locais utilizando a sintaxe segura `with open()`. Pratiquei a manipulação de arquivos físicos no disco rígido através dos modos de escrita (`'w'`) para criação de regras de acesso (whitelist) e leitura (`'r'`) para carregamento de informações em memória.
+* **Capítulo 10: Organização de Arquivos (`organizador_arquivos.py`)**
+    * **O que aprendi:** Automação de rotinas do sistema operacional utilizando os módulos `os` e `shutil`. Compreendi como verificar a existência de diretórios (`os.path.exists`), criar pastas automaticamente (`os.makedirs`) e gerenciar caminhos lógicos para cópias de segurança de arquivos de configuração.
+* **Capítulo 11: Depuração / Debugging (`depurador_logs.py`)**
+    * **O que aprendi:** Substituição de saídas informais de tela (`print`) por rastreamento profissional baseado no módulo `logging`. Aprendi a configurar níveis hierárquicos de criticidade (`DEBUG`, `INFO`, `ERROR`) direcionados para arquivos físicos de auditoria (`.log`), capturando anomalias operacionais de forma silenciosa e rastreável.
+
+---
+
+## 🚀 Prática de Git & Evolução do Fluxo de Trabalho
+
+Aproveitei a construção deste repositório para praticar o uso do Git diretamente pelo terminal integrado do VS Code, aprimorando o controle de versão em duas etapas fundamentais:
+
+### Etapa 1: Comandos Essenciais (08/06)
+O objetivo inicial foi fixar os comandos base de empacotamento e envio:
+* **`git status`**: Mapeamento de arquivos modificados.
+* **`git add`**: Movimentação de arquivos para a área de preparação (*Staging Area*).
+* **`git commit`**: Registro local das alterações.
+* **`git push`**: Envio do pacote para o repositório remoto.
+
+### Etapa 2: Commits Atômicos e Sincronização (11/06)
+A utilização do Git foi aprofundada para refletir boas práticas reais de ambientes de produção:
+* **Commits Atômicos**: Em vez de unificar múltiplos arquivos em um único envio genérico, cada script foi preparado de forma cirúrgica (`git add [arquivo]`) e registrado com sua própria mensagem semântica descritiva.
+* **Resolução de Divergências (`git pull` & Merge)**: Sincronização da branch local com o repositório remoto utilizando `git pull origin main --allow-unrelated-histories` para mesclar históricos divergentes de forma segura.
+* **Uso de Editores por Terminal (Vim)**: Prática dos comandos essenciais de console (como o atalho de salvamento e fechamento `:wq`) para concluir mensagens de mesclagem diretamente no terminal antes do envio definitivo.
 
 ---
 
@@ -40,4 +69,4 @@ Aproveitando o encerramento deste primeiro ciclo de scripts, utilizei este repos
 * **Controle de Versão:** Git & GitHub
 
 ---
-*Progresso documentado em 8 de junho de 2026.*
+*Progresso documentado entre os dias 08 e 11 de junho de 2026.*
